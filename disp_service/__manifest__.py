@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    "name": "Disp Service",
+    "name": "Service Dispatch",
     "summary": "To improve efficiency in retail and service delivery, we provide AI solution in inventory optimization, service dispatching.",
     "version": "18.0.1.0.0",
     "category": "Industries",
