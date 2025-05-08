@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 定义 URL 动作 -->
+<!--    <record id="action_open_external_url" model="ir.actions.act_url">-->
+<!--        <field name="name">MES</field>-->
+<!--        <field name="url">http://localhost:8881/ed/</field>  &lt;!&ndash; 替换为目标网址 &ndash;&gt;-->
+<!--        <field name="target">new</field>  &lt;!&ndash; 新标签页打开 &ndash;&gt;-->
+<!--    </record>-->
+
+    <record id="action_open_external_url" model="ir.actions.act_url">
+        <field name="name">快盒调度系统</field>
+        <field name="url">/disp/jwt/login</field>  <!-- 替换为目标网址 -->
+        <field name="target">new</field>  <!-- 新标签页打开 -->
+    </record>
+
+    <!-- 定义菜单项 -->
+    <menuitem
+        id="menu_open_external_url"
+        name="快盒调度系统"
+        parent="menu_disp"
+        action="action_open_external_url"
+        sequence="10"
+    />
+</odoo>

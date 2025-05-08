@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="disp_config_form" model="ir.ui.view">
+            <field name="name">disp.config.form</field>
+            <field name="model">disp.config</field>
+            <field name="arch" type="xml">
+                <form string="Content">
+                    <header>
+                    </header>
+                    <sheet>
+                         <div class="oe_title">
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="api_url"/>
+                                <field name="api_key"/>
+                                <field name="login_url"/>
+                                <field name="type"/>
+                                <field name="expiration_minutes"/>
+
+
+                            </group>
+                            <group>
+
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="disp_config_list_view" model="ir.ui.view">
+            <field name="name">disp.config.list</field>
+            <field name="model">disp.config</field>
+            <field name="arch" type="xml">
+                <list default_order="write_date desc,create_date desc">
+                    <field name="name"/>
+                    <field name="api_url"/>
+                    <field name="api_key"/>
+                    <field name="login_url"/>
+                    <field name="type"/>
+                    <field name="expiration_minutes"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_disp_config" model="ir.actions.act_window">
+            <field name="name">Disp Config</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">disp.config</field>
+            <field name="view_mode">list,form</field>
+            <field name="view_id" eval="False"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    点击创建内容
+                </p>
+            </field>
+        </record>
+
+        <menuitem
+                action="action_disp_config"
+                name="Disp Config"
+                id="menu_action_disp_config"
+                parent="menu_disp"
+        />
+    </data>
+</odoo>
